@@ -1,0 +1,36 @@
+.tableWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tableContainer {
+    width: 90%;
+    border-spacing: 0 20px;
+}
+td{
+    text-align: left;
+    font-weight: bolder;
+    height: 60px;
+
+
+}
+td:last-child{
+    padding-left: 20px;
+    border-left: gray solid 1px;
+}
+td:nth-child(even){
+    padding-left: 20px;
+    border-left: gray solid 1px;
+}
+td:first-child{
+    text-align: center;
+}
+
+tr {
+    border-radius: 10px;
+    box-shadow: 0 0 3px;
+}
+
+
+
