@@ -6,8 +6,8 @@ const instance = axios.create({
 })
 
 export const CountriesAPI = {
-    getCountriesData() {
-       return instance.get(`https://api.covid19api.com/summary`)
-            .then(response => {return response.data})
+    async getCountriesData() {
+        const res = await instance.get(`https://api.covid19api.com/summary`)
+        return res.data
     }
 }

@@ -6,6 +6,7 @@ import {getCountriesStatistics} from "../../redux/data-reducer";
 const mapStateToProps = (state) => {
     return{
         data: state.dataState.filteredData,
+        isLoaded: state.dataState.isLoaded
     }
 }
 

@@ -1,29 +1,23 @@
 import {useEffect, useState} from "react";
-import styles from "./SearcherEngine.module.css"
+import Searcher from "./Searcher";
 
-const Searcher = (props) => {
+const SearcherEngine = ({country, setFilteredData}) => {
 
     const [tempSearch, setTempSearch] = useState("")
 
     useEffect(() => {
-        const filteredCountries = props.country.filter(country => {
+        const filteredCountries = country.filter(country => {
             return country.Country.toLowerCase().includes(tempSearch.toLowerCase())
         })
 
-        props.setFilteredData(filteredCountries)
-    }, [props.country, tempSearch])
+        setFilteredData(filteredCountries)
+    }, [country, tempSearch])
 
     return (
-        <div className={styles.searcher}>
-            <form>
-                <input type="text" placeholder={"Search..."}
-                       onChange={(e) => {
-                           setTempSearch(e.currentTarget.value)
-                       }}/>
-            </form>
-
+        <div >
+            <Searcher setTempSearch={setTempSearch}/>
         </div>
     )
 }
 
-export default Searcher
+export default SearcherEngine

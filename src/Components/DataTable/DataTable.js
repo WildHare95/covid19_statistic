@@ -1,43 +1,38 @@
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import styles from "./TableStyles.module.css"
+import UnitStatisticBlock from "../UnitStatistic/UnitStatisticBlock";
+import Table from "./Table";
+import Preloader from "../common/Preloader/Preloader";
 
 
-const DataTable = (props) => {
+const DataTable = ({getCountriesStatistics, data, isLoaded}) => {
 
-    const portion = props.data.slice(0, 20)
+    const [addCountries, setAddCountries] = useState(20)
+    const [modalActive, setModalActive] = useState(false)
+    const [unitData, setUnitData] = useState({})
+    const currentCountries = data.slice(0, addCountries)
 
     useEffect(() => {
-        props.getCountriesStatistics()
+        getCountriesStatistics()
     }, [])
 
     return (
         <div className={styles.tableWrapper}>
+            {
+                isLoaded ?
+                <Table currentCountries={currentCountries} setModalActive={setModalActive} setUnitData={setUnitData}/> :
+                <Preloader/>
+            }
+            {
+                data.length > addCountries ?
+                    <button onClick={() => {
+                        setAddCountries(addCountries + 20)}}>
+                        <span>Add Countries</span>
+                    </button> :
+                    <></>
+            }
+            <UnitStatisticBlock active={modalActive} setActive={setModalActive} unitData={unitData}/>
 
-            <table className={styles.tableContainer}>
-                <tbody>
-                <tr>
-                    <td>№</td>
-                    <td>Country</td>
-                    <td>Total Confirmed</td>
-                </tr>
-
-                {
-                    portion.map((item, index) =>
-                        <tr key={index}>
-                            <td>{index + 1}</td>
-                            <td>{item.Country}</td>
-                            <td>{item.TotalConfirmed}</td>
-                        </tr>
-                    )
-                }
-                </tbody>
-            </table>
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-            <span>5</span>
-            <span>6</span>
         </div>
     );
 }

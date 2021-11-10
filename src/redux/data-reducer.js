@@ -6,17 +6,19 @@ const FILTERED_DATA = "FILTERED_DATA";
 let initialState = {
     data: [],
     filteredData: [],
+    isLoaded: false
 }
 
 const dataState = (state = initialState, action) => {
     switch (action.type) {
         case DATA_STATISTICS:
-            return{
+            return {
                 ...state,
                 data: action.data,
+                isLoaded: true
             }
         case FILTERED_DATA:
-            return{
+            return {
                 ...state,
                 filteredData: action.data,
             }
@@ -37,7 +39,12 @@ export const getCountriesStatistics = () => (dispatch) => {
 
 export const setFilteredData = (data) => (dispatch) => {
     const filteredData = []
-    data.map((item) => filteredData.push({Country: item.Country, TotalConfirmed: item.TotalConfirmed}))
+    data.map((item) => filteredData.push({
+        Country: item.Country,
+        TotalConfirmed: item.TotalConfirmed,
+        TotalDeaths: item.TotalDeaths,
+        TotalRecovered: item.TotalRecovered
+    }))
     dispatch(setFilteredDataMount(filteredData))
 }
 
