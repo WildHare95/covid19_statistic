@@ -13,9 +13,9 @@ const UnitStatisticBlock = ({active, setActive, unitData}) => {
             <div className={active ? styles.modal_content_active : styles.modal_content} onClick={e => e.stopPropagation()}>
                 <div className={styles.title}>{unitData.Country}</div>
                 <div className={styles.stats}>
-                    <UnitStatisticComponent data={unitData.TotalConfirmed} label="TotalConfirmed" icon={confirmed}/>
-                    <UnitStatisticComponent data={unitData.TotalDeaths} label="TotalDeaths" icon={death}/>
-                    <UnitStatisticComponent data={unitData.TotalRecovered} label="TotalRecovered" icon={recovered}/>
+                    <UnitStatisticComponent data={unitData.TotalConfirmed} label="Total Confirmed" icon={confirmed}/>
+                    <UnitStatisticComponent data={unitData.TotalDeaths} label="Total Deaths" icon={death}/>
+                    <UnitStatisticComponent data={unitData.TotalRecovered} label="Total Recovered" icon={recovered}/>
                 </div>
             </div>
         </div>

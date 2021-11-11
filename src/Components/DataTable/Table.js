@@ -1,22 +1,24 @@
 import styles from "./TableStyles.module.css"
 import Warning from "../common/Warning/Warning";
+import {useState} from "react";
 
 
-const Table = ({currentCountries, setModalActive, setUnitData}) => {
+const Table = ({currentCountries, setModalActive, setUnitData, sortData}) => {
+    const [sortFit, setSortFit] = useState(null)
 
     return (
         currentCountries.length > 0 ?
         <table className={styles.tableContainer}>
             <tbody>
             <tr>
-                <td>№</td>
-                <td>Country</td>
-                <td>Total Confirmed</td>
+                <td className={styles.border_right}>№</td>
+                <td className={styles.border_mid} onClick={() => setSortFit((current) => current = null)}>Country</td>
+                <td className={styles.border_left} onClick={() => setSortFit((current = true) => !current)}>Total Confirmed</td>
             </tr>
             {
 
-                currentCountries.map((item, index) => (
-                        <tr key={index} onClick={() => {
+                sortData(currentCountries,sortFit).map((item, index) => (
+                        <tr  className={styles.tableBody} key={index} onClick={() => {
                             setModalActive(true)
                             setUnitData(
                                 {

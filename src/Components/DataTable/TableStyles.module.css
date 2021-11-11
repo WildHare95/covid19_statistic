@@ -1,4 +1,5 @@
-.tableWrapper{
+/*TABLE SETTINGS*/
+.tableWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,31 +9,86 @@
     width: 90%;
     border-spacing: 0 20px;
 }
+.tableBody{
+
+}
+
 td{
     text-align: left;
     font-weight: bolder;
     height: 60px;
-
-
-}
-td:last-child{
-    padding-left: 20px;
-    border-left: gray solid 1px;
-}
-td:nth-child(even){
-    padding-left: 20px;
-    border-left: gray solid 1px;
-}
-td:first-child{
-    text-align: center;
 }
 
 tr {
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 0 3px;
+    cursor: pointer;
 }
 
-button{
+td:last-child {
+    padding-left: 20px;
+    border-left: gray solid 1px;
+}
+
+td:nth-child(even) {
+    padding-left: 20px;
+    border-left: gray solid 1px;
+}
+
+td:first-child {
+    text-align: center;
+}
+
+tr:hover:first-child {
+    background: #2196F3;
+
+}
+
+tr:hover {
+    box-shadow: 2px 2px 3px;
+}
+
+
+/*HEADER TABLE*/
+.border_left {
+    background: #2196F3;
+    border-radius: 0 20px 20px 0;
+    color: #FFFFFF;
+}
+
+.border_left:hover {
+    background: #2196F3;
+    color: #c5ea3e;
+}
+
+.border_left:active {
+    background: #2821f3;
+    border-radius: 0 20px 20px 0;
+    color: #777777;
+}
+
+.border_right {
+    background: #2196F3;
+    border-radius: 20px 0 0 20px;
+    color: #FFFFFF;
+}
+
+.border_mid {
+    background: #2196F3;
+    color: #FFFFFF;
+}
+
+.border_mid:active {
+    background: #2821f3;
+    color: #777777;
+}
+
+.border_mid:hover {
+    color: #c5ea3e;
+}
+
+/*ADD COUNTRIES BUTTON*/
+.buttonAdd {
     border-radius: 10px;
     background-color: #f4511e;
     border: none;
@@ -44,14 +100,15 @@ button{
     transition: all 0.5s;
     cursor: pointer;
 }
-button span {
+
+.buttonAdd span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
 }
 
-button span:after {
+.buttonAdd span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -60,13 +117,14 @@ button span:after {
     transition: 0.5s;
 }
 
-button:hover span {
+.buttonAdd:hover span {
     padding-right: 25px;
 }
 
-button:hover span:after {
+.buttonAdd:hover span:after {
     opacity: 1;
     right: 0;
 }
+
 
 

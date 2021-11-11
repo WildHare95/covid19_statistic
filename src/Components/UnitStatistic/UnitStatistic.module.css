@@ -1,3 +1,4 @@
+/*POSITION UNIT STATISTIC*/
 .container {
     height: 100%;
     width: 100%;
@@ -16,6 +17,7 @@
     transform: scale(0);
 }
 
+/*SETTINGS WINDOW STATISTIC*/
 .modal_content {
     padding: 20px;
     background-color: #FFFFFF;
@@ -36,6 +38,7 @@
 
 }
 
+/*SETTINGS STAFF WINDOW*/
 .stats {
     display: flex;
     flex-direction: column;
@@ -74,6 +77,7 @@
 
 }
 
+/*SETTINGS FOR DIFFERENT RESOLUTIONS*/
 @media all and (max-width: 321px) {
     .line {
         display: flex;

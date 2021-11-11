@@ -1,3 +1,4 @@
+/*POSITION WARNING WINDOW*/
 .warning {
     height: 100%;
     width: 100%;
@@ -11,6 +12,7 @@
 
 }
 
+/*SETTINGS WARNING WINDOW*/
 .modal_content {
     color: #FFFFFF;
     text-align: center;

@@ -1,3 +1,4 @@
+/*PRELOADER SETTINGS*/
 .loading{
     display: flex;
     align-items: center;
@@ -32,7 +33,7 @@
         transform: rotate(360deg);
     }
 }
-
+/*PRELOADER POSITION*/
 .ringContainer{
     height: 100%;
     width: 100%;
