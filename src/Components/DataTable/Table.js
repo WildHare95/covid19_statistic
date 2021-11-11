@@ -11,9 +11,9 @@ const Table = ({currentCountries, setModalActive, setUnitData, sortData}) => {
         <table className={styles.tableContainer}>
             <tbody>
             <tr>
-                <td className={styles.border_right}>№</td>
-                <td className={styles.border_mid} onClick={() => setSortFit((current) => current = null)}>Country</td>
-                <td className={styles.border_left} onClick={() => setSortFit((current = true) => !current)}>Total Confirmed</td>
+                <td className={styles.borderRight}>№</td>
+                <td className={styles.borderMid} onClick={() => setSortFit((current) => current = null)}>Country</td>
+                <td className={styles.borderLeft} onClick={() => setSortFit((current = true) => !current)}>Total Confirmed</td>
             </tr>
             {
 

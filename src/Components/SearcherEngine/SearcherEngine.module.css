@@ -19,6 +19,7 @@ input {
     font-family: "Roboto", sans-serif;
     font-size: 32px;
     margin-left: 100px;
+    padding-left: 20px;
 }
 
 input:focus {

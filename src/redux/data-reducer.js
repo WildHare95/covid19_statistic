@@ -3,6 +3,7 @@ import {CountriesAPI} from "../Components/api/api";
 const DATA_STATISTICS = "DATA_STATISTICS";
 const FILTERED_DATA = "FILTERED_DATA";
 
+/*Declaring a general data structure with default values*/
 let initialState = {
     data: [],
     filteredData: [],
@@ -10,6 +11,7 @@ let initialState = {
 }
 
 const dataState = (state = initialState, action) => {
+    /*Changes to data in the general data structure depending on the type*/
     switch (action.type) {
         case DATA_STATISTICS:
             return {
@@ -33,11 +35,23 @@ const setFilteredDataMount = (data) => ({type: FILTERED_DATA, data})
 
 
 export const getCountriesStatistics = () => (dispatch) => {
+    /*Request to the server*/
     CountriesAPI.getCountriesData()
+        /*Adding array to the general data structure*/
         .then(data => dispatch(setDataStatistics(data.Countries)))
 }
 
 export const setFilteredData = (data) => (dispatch) => {
+    /*Creating a filtered array with a structure:
+    filteredData = [
+        {
+            Country: "The name of the country",
+            TotalConfirmed: "Total number of confirmations",
+            TotalDeaths: "Total number of deaths",
+            TotalRecovered: "Total number of recovered",
+        }
+
+    ]*/
     const filteredData = []
     data.map((item) => filteredData.push({
         Country: item.Country,
@@ -45,10 +59,9 @@ export const setFilteredData = (data) => (dispatch) => {
         TotalDeaths: item.TotalDeaths,
         TotalRecovered: item.TotalRecovered
     }))
+    /*Adding a filtered array to the general data structure*/
     dispatch(setFilteredDataMount(filteredData))
 }
-
-
 
 
 export default dataState

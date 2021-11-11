@@ -7,10 +7,10 @@ import UnitStatisticComponent from "./UnitStatisticComponent";
 
 const UnitStatisticBlock = ({active, setActive, unitData}) => {
     return (
-        <div className={active ? styles.container : styles.container_active} onClick={() => {
+        <div className={active ? styles.container : styles.containerActive} onClick={() => {
             setActive(false)
         }}>
-            <div className={active ? styles.modal_content_active : styles.modal_content} onClick={e => e.stopPropagation()}>
+            <div className={active ? styles.modalContentActive : styles.modalContent} onClick={e => e.stopPropagation()}>
                 <div className={styles.title}>{unitData.Country}</div>
                 <div className={styles.stats}>
                     <UnitStatisticComponent data={unitData.TotalConfirmed} label="Total Confirmed" icon={confirmed}/>

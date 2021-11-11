@@ -13,12 +13,12 @@
     transform: scale(1);
 }
 
-.container_active {
+.containerActive {
     transform: scale(0);
 }
 
 /*SETTINGS WINDOW STATISTIC*/
-.modal_content {
+.modalContent {
     padding: 20px;
     background-color: #FFFFFF;
     height: 200px;
@@ -27,7 +27,7 @@
     transform: scale(0.5);
 }
 
-.modal_content_active{
+.modalContentActive{
     padding: 20px;
     background-color: #FFFFFF;
     height: 200px;
@@ -50,7 +50,7 @@
 
 }
 
-.picture {
+.icon {
     margin-right: 15px;
     width: 30px;
 }
@@ -87,7 +87,7 @@
 }
 
 @media all and (max-width: 376px) {
-    .modal_content {
+    .modalContent {
         width: 80%;
     }
 

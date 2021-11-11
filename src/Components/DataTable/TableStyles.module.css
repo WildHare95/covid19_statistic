@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "Roboto", sans-serif;
 }
 
 .tableContainer {
@@ -50,40 +51,40 @@ tr:hover {
 
 
 /*HEADER TABLE*/
-.border_left {
+.borderLeft {
     background: #2196F3;
     border-radius: 0 20px 20px 0;
     color: #FFFFFF;
 }
 
-.border_left:hover {
+.borderLeft:hover {
     background: #2196F3;
     color: #c5ea3e;
 }
 
-.border_left:active {
+.borderLeft:active {
     background: #2821f3;
     border-radius: 0 20px 20px 0;
     color: #777777;
 }
 
-.border_right {
+.borderRight {
     background: #2196F3;
     border-radius: 20px 0 0 20px;
     color: #FFFFFF;
 }
 
-.border_mid {
+.borderMid {
     background: #2196F3;
     color: #FFFFFF;
 }
 
-.border_mid:active {
+.borderMid:active {
     background: #2821f3;
     color: #777777;
 }
 
-.border_mid:hover {
+.borderMid:hover {
     color: #c5ea3e;
 }
 
