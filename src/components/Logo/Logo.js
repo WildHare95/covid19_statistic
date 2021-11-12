@@ -1,4 +1,4 @@
-import styles from "./Header.module.css"
+import styles from "../Logo/Logo.module.css"
 import logo from "../../assets/logo.png"
 
 const Logo = () => {

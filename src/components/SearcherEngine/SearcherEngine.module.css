@@ -27,7 +27,7 @@ input:focus {
 }
 
 /*INPUT SETTINGS FOR DIFFERENT RESOLUTIONS*/
-@media all and (max-width: 768px){
+@media screen and (max-width: 768px){
     input{
         width: 150px;
         font-size: 24px;
@@ -37,7 +37,7 @@ input:focus {
     }
 }
 
-@media all and (max-width: 426px) {
+@media screen and (max-width: 426px) {
 
     input {
         position: center;

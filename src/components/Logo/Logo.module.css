@@ -1,0 +1,23 @@
+.logoContainer {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    font-size: 62px;
+    font-weight: bold;
+    justify-content: center;
+}
+
+@media screen and (max-width: 426px) {
+    .logoContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+

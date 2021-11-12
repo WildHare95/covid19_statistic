@@ -78,7 +78,7 @@
 }
 
 /*SETTINGS FOR DIFFERENT RESOLUTIONS*/
-@media all and (max-width: 321px) {
+@media screen and (max-width: 321px) {
     .line {
         display: flex;
         justify-content: space-around;
@@ -86,7 +86,7 @@
 
 }
 
-@media all and (max-width: 376px) {
+@media screen and (max-width: 376px) {
     .modalContent {
         width: 80%;
     }

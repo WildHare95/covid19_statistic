@@ -4,15 +4,6 @@
     align-items: center;
 }
 
-.logoContainer {
-    font-family: "Roboto", sans-serif;
-    display: flex;
-    max-width: 100%;
-    align-items: center;
-    font-size: 62px;
-    font-weight: bold;
-}
-
 .tableWrapper {
     display: flex;
     flex-direction: column;
@@ -29,12 +20,8 @@
     }
 }
 
-@media all and (max-width: 426px) {
-    .logoContainer {
-        display: flex;
-        flex-direction: column;
-    }
-    .header{
+@media screen and (max-width: 426px) {
+    .header {
         display: flex;
         flex-direction: column;
 

@@ -1,7 +1,7 @@
-import {CountriesAPI} from "../Components/api/api";
+import {CountriesAPI} from "../api/api";
 
-const DATA_STATISTICS = "DATA_STATISTICS";
-const FILTERED_DATA = "FILTERED_DATA";
+const SET_DATA_STATISTICS = "DATA_STATISTICS";
+const SET_FILTERED_DATA = "FILTERED_DATA";
 
 /*Declaring a general data structure with default values*/
 let initialState = {
@@ -13,13 +13,13 @@ let initialState = {
 const dataState = (state = initialState, action) => {
     /*Changes to data in the general data structure depending on the type*/
     switch (action.type) {
-        case DATA_STATISTICS:
+        case SET_DATA_STATISTICS:
             return {
                 ...state,
                 data: action.data,
                 isLoaded: true
             }
-        case FILTERED_DATA:
+        case SET_FILTERED_DATA:
             return {
                 ...state,
                 filteredData: action.data,
@@ -30,8 +30,8 @@ const dataState = (state = initialState, action) => {
     }
 }
 
-const setDataStatistics = (data) => ({type: DATA_STATISTICS, data})
-const setFilteredDataMount = (data) => ({type: FILTERED_DATA, data})
+const setDataStatistics = (data) => ({type: SET_DATA_STATISTICS, data})
+const setFilteredDataMount = (data) => ({type: SET_FILTERED_DATA, data})
 
 
 export const getCountriesStatistics = () => (dispatch) => {

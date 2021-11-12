@@ -1,6 +1,6 @@
 import styles from "./App.module.css"
-import DataTableContainer from "./Components/DataTable/DataTableContainer";
-import Header from "./Components/Header/Header";
+import DataTableContainer from "./components/DataTable/DataTableContainer";
+import Header from "./components/Header/Header";
 
 const App = () => {
     return (

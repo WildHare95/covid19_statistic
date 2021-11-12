@@ -1,6 +1,6 @@
-import styles from "./UnitStatistic.module.css"
+import styles from "./DetailedView.module.css"
 
-const UnitStatisticComponent = ({data, label, icon}) => {
+const DetailedViewComponent = ({data, label, icon}) => {
     return (
         <div>
             <div className={styles.line}>
@@ -17,4 +17,4 @@ const UnitStatisticComponent = ({data, label, icon}) => {
     )
 }
 
-export default UnitStatisticComponent
+export default DetailedViewComponent
