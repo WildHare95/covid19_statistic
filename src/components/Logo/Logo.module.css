@@ -12,12 +12,18 @@
     .logoContainer {
         display: flex;
         flex-direction: column;
+
     }
 
     .header {
         display: flex;
         flex-direction: column;
 
+    }
+}
+@media screen and (max-width: 769px) {
+    .logoContainer {
+        font-size: 32px
     }
 }
 

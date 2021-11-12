@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 /*FORM SEARCHER POSITION*/
-form {
+.formStyle {
     width: auto;
     margin-right: 60px;
 }
 
 /*INPUT SEARCHER SETTINGS*/
-input {
+.inputStyle {
     width: 300px;
     height: 40px;
     border-radius: 20px;
@@ -22,24 +22,24 @@ input {
     padding-left: 20px;
 }
 
-input:focus {
+.inputStyle:focus {
     width: 400px;
 }
 
 /*INPUT SETTINGS FOR DIFFERENT RESOLUTIONS*/
-@media screen and (max-width: 768px){
-    input{
+@media screen and (max-width: 769px){
+    .inputStyle{
         width: 150px;
         font-size: 24px;
     }
-    input:focus{
+    .inputStyle:focus{
         width: 250px;
     }
 }
 
 @media screen and (max-width: 426px) {
 
-    input {
+    .inputStyle {
         position: center;
         margin-right: 40px;
         font-size: 16px;
